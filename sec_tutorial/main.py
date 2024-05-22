@@ -1,6 +1,7 @@
 import hydra 
 from omegaconf import  DictConfig, OmegaConf
 from dataset import prepare_dataloaders
+from client import generate_client_fn
 
 @hydra.main(config_path="conf", config_name="base", version_base=None)
 
@@ -15,7 +16,8 @@ def main(cfg: DictConfig):
     print(len(trainloaders), len(trainloaders[0].dataset))
 
     ## 3. Define your client
-    client_fn = ge
+    client_fn = generate_client_fn(trainloaders, validationloaders, cfg.num_callsses)
+
 if __name__ == "__main__":
 
     main()

@@ -3,6 +3,7 @@
 num_round: 10
 num_clients: 100
 batch_size: 20
+num_callsses: 10
 config_fit:
   lr: 0.01
   momentum: 0.9
