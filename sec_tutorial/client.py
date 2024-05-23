@@ -11,7 +11,7 @@ class FlowerClient(fl.client.NumPyClient):
     def __init__(self,
                  trainloader,
                  valloader,
-                 num_class) -> None:
+                 num_classes) -> None:
         super().__init__()
 
         self.trainloader = trainloader
@@ -29,7 +29,7 @@ class FlowerClient(fl.client.NumPyClient):
         self.model.load_state_dict(state_dict, strict=True)
 
     def get_parameters(self, config):
-        return [val().cpu().numpy() for _, val in self.model.state_dict().item()]
+        return [val.cpu().numpy() for _, val in self.model.state_dict().items()]
 
     def fit(self, parameters, config):
         # copy the parameters send by the server
@@ -37,15 +37,13 @@ class FlowerClient(fl.client.NumPyClient):
 
         lr = config['lr']
         momentum = config['momentum']
-        epoch = config['local_epoch']
+        epochs = config['local_epochs']
 
         optim = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum)
 
+        train(self.model, self.trainloader, optim, epochs, self.device)
 
-
-        train(self.model, self.trainloader, optim, self.device)
-
-        return self.get_parameters(), len(self.trainloader), {}
+        return self.get_parameters({}), len(self.trainloader), {}
     
     def evaluate(self, parameters, config):
         

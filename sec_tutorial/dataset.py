@@ -13,7 +13,7 @@ def get_mnist(data_path: str = "./data"):
     return trainset, testset
 
 
-def prepare_dataset(num_partitions: int, batch_size: int, val_ratio: float = 0.1):
+def prepare_dataloaders(num_partitions: int, batch_size: int, val_ratio: float = 0.1):
 
     trainset, testset = get_mnist()
 
