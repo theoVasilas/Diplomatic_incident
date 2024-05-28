@@ -1,28 +1,80 @@
+from collections import OrderedDict
 from typing import Dict, Tuple
-from flwr.common import NDArrays
-import tensorflow as tf
+from flwr.common import NDArrays, Scalar
+
+
+from hydra.utils import instantiate
+
+import torch
 import flwr as fl
 
-# Correct input shape for MobileNetV2
-model = tf.keras.applications.MobileNetV2(input_shape=(32, 32, 32), classes=10, weights=None)
-model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+from model import train, test
 
-(x_train, y_train), (x_test, y_test) = tf.keras.datasets.cifar10.load_data()
-
-model.fit(x_train, y_train, epochs=1, batch_size=32)
 
 class FlowerClient(fl.client.NumPyClient):
-    def get_parameters(self, config):
-        return model.get_weights()
-    
-    def fit(self, parameters, config):
-        model.set_weights(parameters)
-        model.fit(x_train, y_train, epochs=1, batch_size=32)
-        return model.get_weights(), len(x_train), {}
-    
-    def evaluate(self, parameters, config):
-        model.set_weights(parameters)
-        loss, accuracy = model.evaluate(x_test, y_test)
-        return loss, len(x_test), {"accuracy": accuracy}
+    """A standard FlowerClient."""
 
-fl.client.start_numpy_client(server_address="127.0.0.1:8080", client=FlowerClient)
+    def __init__(self, trainloader, vallodaer, model_cfg) -> None:
+        super().__init__()
+
+        self.trainloader = trainloader
+        self.valloader = vallodaer
+
+        # For further flexibility, we don't hardcode the type of model we use in
+        # federation. Here we are instantiating the object defined in `conf/model/net.yaml`
+        # (unless you changed the default) and by then `num_classes` would already be auto-resolved
+        # to `num_classes=10` (since this was known right from the moment you launched the experiment)
+        self.model = instantiate(model_cfg)
+
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+    def set_parameters(self, parameters):
+        params_dict = zip(self.model.state_dict().keys(), parameters)
+        state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
+        self.model.load_state_dict(state_dict, strict=True)
+
+    def get_parameters(self, config: Dict[str, Scalar]):
+        return [val.cpu().numpy() for _, val in self.model.state_dict().items()]
+
+    def fit(self, parameters, config):
+        # copy parameters sent by the server into client's local model
+        self.set_parameters(parameters)
+
+        lr = config["lr"]
+        momentum = config["momentum"]
+        epochs = config["local_epochs"]
+
+        # You could also set this optimiser from a config file. That would make it
+        # easy to run experiments considering different optimisers and set one or another
+        # directly from the command line (you can use as inspiration what we did for adding
+        # support for FedAvg and FedAdam strategies)
+        optim = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=momentum)
+
+        # do local training
+        # similarly, you can set this via a config. For example, imagine you have different
+        # experiments using wildly different training protocols (e.g. vision, speech). You can
+        # toggle between different training functions directly from the config without having
+        # to clutter your code with if/else statements all over the place :)
+        train(self.model, self.trainloader, optim, epochs, self.device)
+
+        return self.get_parameters({}), len(self.trainloader), {}
+
+    def evaluate(self, parameters: NDArrays, config: Dict[str, Scalar]):
+        self.set_parameters(parameters)
+
+        loss, accuracy = test(self.model, self.valloader, self.device)
+
+        return float(loss), len(self.valloader), {"accuracy": accuracy}
+
+
+def generate_client_fn(trainloaders, valloaders, model_cfg):
+    """Return a function to construct a FlowerClient."""
+
+    def client_fn(cid: str):
+        return FlowerClient(
+            trainloader=trainloaders[int(cid)],
+            vallodaer=valloaders[int(cid)],
+            model_cfg=model_cfg,
+        ).to_client()
+
+    return client_fn
