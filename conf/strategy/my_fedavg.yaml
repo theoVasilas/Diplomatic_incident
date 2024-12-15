@@ -1,0 +1,23 @@
+# Configuration for Flower's FedAvg Strategy
+_target_: flwr.server.strategy.FedAvg
+
+# Strategy parameters
+fraction_fit: 1                          # Fraction of clients to be used in each training round
+fraction_evaluate: 1                     # Fraction of clients to be used in evaluation
+min_fit_clients: 5                       # Minimum number of clients required for training
+min_evaluate_clients: 2                  # Minimum number of clients required for evaluation
+min_available_clients: ${NUM_CLIENTS}    # Reference to the total number of clients (defined elsewhere)
+
+# Evaluation function and configuration
+evaluate_fn: My_evaluate                  # Function used for validation on the server side
+on_fit_config_fn: fit_config              # Function to pass configuration during training
+on_evaluate_config_fn: evaluate_config    # Function to pass configuration during evaluation
+
+# Evaluation metrics aggregation
+evaluate_metrics_aggregation_fn:         # Custom weighted average for evaluation metrics
+  _target_: server.My_weighted_average
+  config: ${My_weighted_average}
+
+# Additional optional configurations
+# accept_failures: true                  # Uncomment if you want to handle failures gracefully
+# initial_parameters: ndarrays_to_parameters(params) # Optional: specify initial model parameters

@@ -1,0 +1,17 @@
+
+num_rounds: 2
+num_clients: 5
+batch_size: 32
+num_classes: 10
+num_clients_per_round_fit: 2
+num_clients_per_round_eval: 2
+
+config_fit:
+  local_epochs: 1
+#   lr: 0.01
+#   momentum: 0.9
+
+defaults:
+  - optimizer: Adam            # Points to conf/optimizer/sgd.yaml
+  - model: net
+  - strategy: fedavg # points to conf/strategy/fedavg.yaml

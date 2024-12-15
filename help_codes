@@ -1,0 +1,29 @@
+d /Diplomatic_incident/flwr_hydra
+git init
+git status
+git add . 
+git commit -m "new commit"
+git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
+git push -u origin <my_branch>
+
+#======================
+ # Allow merge of unrelated histories
+git merge origin/flwr_hydra --allow-unrelated-histories 
+
+git checkout -b sim_hydra
+
+#=========================================
+git init
+git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
+git pull origin flwr_hydra
+ 
+#===========================================
+cd /Diplomatic_incident/flwr_hydra
+conda activate flower_25
+clear; python main.py
+
+
+#===========================
+conda deactivate
+ZZZ
+conda activate flower_

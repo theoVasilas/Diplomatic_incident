@@ -1,0 +1,5 @@
+_target_: torch.optim.SGD 
+_partial_: true
+params : 
+lr : 0.01
+momentum : 0.9
