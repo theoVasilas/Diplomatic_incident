@@ -1,5 +1,6 @@
 data/
 outputs/
-emission.csv
+emissions.csv
 help_codes/
 help_run/
+__pycache__/

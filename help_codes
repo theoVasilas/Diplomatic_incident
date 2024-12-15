@@ -4,7 +4,7 @@ git status
 git add . 
 git commit -m "new commit"
 git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
-git push -u origin <my_branch>
+git push -u origin sim_hydra
 
 #=======IF BRANCH IS CLEAR ===============
  # Allow merge of unrelated histories
