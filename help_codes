@@ -6,6 +6,8 @@ git commit -m "new commit"
 git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
 git push -u origin sim_hydra
 
+git push origin sim_hydra --force
+
 #=======IF BRANCH IS CLEAR ===============
  # Allow merge of unrelated histories
 git fetch origin
@@ -17,6 +19,11 @@ git init
 git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
 git pull origin flwr_hydra
  
+
+#=================================
+See files you have already staged
+git diff --cached
+
 #===========================================
 cd /Diplomatic_incident/flwr_hydra
 conda activate flower_25
