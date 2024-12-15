@@ -8,6 +8,9 @@ git push -u origin sim_hydra
 
 git push origin sim_hydra --force
 
+
+git rm --cached __pycache__ -r
+
 #=======IF BRANCH IS CLEAR ===============
  # Allow merge of unrelated histories
 git fetch origin
