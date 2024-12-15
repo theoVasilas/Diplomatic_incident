@@ -6,10 +6,10 @@ git commit -m "new commit"
 git remote add origin git@github.com:theoVasilas/Diplomatic_incident.git
 git push -u origin <my_branch>
 
-#======================
+#=======IF BRANCH IS CLEAR ===============
  # Allow merge of unrelated histories
+git fetch origin
 git merge origin/flwr_hydra --allow-unrelated-histories 
-
 git checkout -b sim_hydra
 
 #=========================================
