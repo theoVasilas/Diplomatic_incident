@@ -39,3 +39,9 @@ def get_evalulate_fn(model_cfg: int, testloader):
         return loss, {"accuracy": accuracy}
 
     return evaluate_fn
+
+
+def server_fn(context: Context) -> ServerAppComponents:
+    config = ServerConfig(num_rounds=num_rounds)
+    print(type(strategy).__name__)
+    return ServerAppComponents(strategy=strategy, config=config)

@@ -37,3 +37,9 @@ clear; python main.py
 conda deactivate
 ZZZ
 conda activate flower_
+
+
+#=========================
+How to update an existing Conda environment with a .yml file
+conda activate myenv
+conda env update --file local.yml --prune
