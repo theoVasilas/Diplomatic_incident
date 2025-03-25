@@ -1,0 +1,1953 @@
+[2025-02-11 13:06:48,056][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:06:48,056][flwr][INFO] - 
+[2025-02-11 13:06:48,057][flwr][INFO] - [INIT]
+[2025-02-11 13:06:48,057][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:06:48,058][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:06:55,099][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:06:55,100][flwr][INFO] - 
+[2025-02-11 13:06:55,100][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:06:55,100][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:07:02,241][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:07:02,241][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=7232, ip=172.27.85.201, actor_id=18409963167e35d55ec295d001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f16dc193210>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=7232, ip=172.27.85.201, actor_id=18409963167e35d55ec295d001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f16dc193210>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:07:02,243][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=7232, ip=172.27.85.201, actor_id=18409963167e35d55ec295d001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f16dc193210>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=7232, ip=172.27.85.201, actor_id=18409963167e35d55ec295d001000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f16dc193210>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:07:02,874][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:07:02,875][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=7233, ip=172.27.85.201, actor_id=a21210ae33c470c72b01767301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f22446d0f10>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=7233, ip=172.27.85.201, actor_id=a21210ae33c470c72b01767301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f22446d0f10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:07:02,875][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=7233, ip=172.27.85.201, actor_id=a21210ae33c470c72b01767301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f22446d0f10>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=7233, ip=172.27.85.201, actor_id=a21210ae33c470c72b01767301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f22446d0f10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:07:02,915][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:07:07,058][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.958037023985526)
+[2025-02-11 13:07:07,058][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:07:09,463][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:07:09,463][flwr][INFO] - 
+[2025-02-11 13:07:09,464][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:07:09,464][flwr][INFO] - Run finished 1 round(s) in 14.36s
+[2025-02-11 13:07:09,464][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:07:09,464][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:07:09,464][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:07:09,464][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:07:09,464][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:07:09,464][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:07:09,464][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:07:09,464][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:07:09,465][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:07:09,465][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:07:09,465][flwr][INFO] - 
+[2025-02-11 13:18:01,615][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:18:01,616][flwr][INFO] - 
+[2025-02-11 13:18:01,616][flwr][INFO] - [INIT]
+[2025-02-11 13:18:01,616][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:18:01,617][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:18:07,044][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:18:07,044][flwr][INFO] - 
+[2025-02-11 13:18:07,044][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:18:07,045][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:18:13,885][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:18:13,885][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=10804, ip=172.27.85.201, actor_id=f739a0e86866d3f011fe2c4901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fcb286c6fd0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=10804, ip=172.27.85.201, actor_id=f739a0e86866d3f011fe2c4901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fcb286c6fd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:18:13,887][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=10804, ip=172.27.85.201, actor_id=f739a0e86866d3f011fe2c4901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fcb286c6fd0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=10804, ip=172.27.85.201, actor_id=f739a0e86866d3f011fe2c4901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fcb286c6fd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:18:14,027][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:18:14,027][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=10807, ip=172.27.85.201, actor_id=1e169cb2014cde401aab09ef01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f50cc0cb990>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=10807, ip=172.27.85.201, actor_id=1e169cb2014cde401aab09ef01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f50cc0cb990>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:18:14,027][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=10807, ip=172.27.85.201, actor_id=1e169cb2014cde401aab09ef01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f50cc0cb990>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=10807, ip=172.27.85.201, actor_id=1e169cb2014cde401aab09ef01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f50cc0cb990>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:18:14,058][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:18:18,021][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 10.977077032992383)
+[2025-02-11 13:18:18,022][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:18:20,527][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:18:20,527][flwr][INFO] - 
+[2025-02-11 13:18:20,527][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:18:20,527][flwr][INFO] - Run finished 1 round(s) in 13.48s
+[2025-02-11 13:18:20,527][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:18:20,528][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:18:20,528][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:18:20,528][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:18:20,528][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:18:20,528][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:18:20,528][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:18:20,528][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:18:20,528][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:18:20,528][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:18:20,528][flwr][INFO] - 
+[2025-02-11 13:19:02,354][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:19:02,354][flwr][INFO] - 
+[2025-02-11 13:19:02,355][flwr][INFO] - [INIT]
+[2025-02-11 13:19:02,355][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:19:02,355][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:19:09,009][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:19:09,009][flwr][INFO] - 
+[2025-02-11 13:19:09,009][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:19:09,010][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:19:16,076][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:19:16,076][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=12504, ip=172.27.85.201, actor_id=e4091ebb56aa27192198b48601000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f27e0532ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=12504, ip=172.27.85.201, actor_id=e4091ebb56aa27192198b48601000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f27e0532ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:19:16,077][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=12504, ip=172.27.85.201, actor_id=e4091ebb56aa27192198b48601000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f27e0532ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=12504, ip=172.27.85.201, actor_id=e4091ebb56aa27192198b48601000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f27e0532ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:19:16,088][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:19:16,088][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=12499, ip=172.27.85.201, actor_id=2a0af0f523ef875df789623501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f85782d3cd0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=12499, ip=172.27.85.201, actor_id=2a0af0f523ef875df789623501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f85782d3cd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:19:16,089][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=12499, ip=172.27.85.201, actor_id=2a0af0f523ef875df789623501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f85782d3cd0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=12499, ip=172.27.85.201, actor_id=2a0af0f523ef875df789623501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f85782d3cd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:19:16,124][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:19:20,125][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.115850909001892)
+[2025-02-11 13:19:20,125][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:19:22,631][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:19:22,631][flwr][INFO] - 
+[2025-02-11 13:19:22,631][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:19:22,631][flwr][INFO] - Run finished 1 round(s) in 13.62s
+[2025-02-11 13:19:22,631][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:19:22,632][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:19:22,632][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:19:22,632][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:19:22,632][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:19:22,632][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:19:22,632][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:19:22,632][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:19:22,632][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:19:22,632][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:19:22,632][flwr][INFO] - 
+[2025-02-11 13:20:01,265][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:20:01,266][flwr][INFO] - 
+[2025-02-11 13:20:01,267][flwr][INFO] - [INIT]
+[2025-02-11 13:20:01,267][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:20:01,267][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:20:07,748][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:20:07,748][flwr][INFO] - 
+[2025-02-11 13:20:07,748][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:20:07,749][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:20:14,675][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:20:14,675][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=14194, ip=172.27.85.201, actor_id=b9545b294edc8fbf94609cf301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f6d2c64a110>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=14194, ip=172.27.85.201, actor_id=b9545b294edc8fbf94609cf301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f6d2c64a110>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:20:14,677][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=14194, ip=172.27.85.201, actor_id=b9545b294edc8fbf94609cf301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f6d2c64a110>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=14194, ip=172.27.85.201, actor_id=b9545b294edc8fbf94609cf301000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f6d2c64a110>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:20:14,974][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:20:14,974][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=14193, ip=172.27.85.201, actor_id=499a77f6cb30da7bf384d3a701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f24fc1a32d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=14193, ip=172.27.85.201, actor_id=499a77f6cb30da7bf384d3a701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f24fc1a32d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:20:14,975][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=14193, ip=172.27.85.201, actor_id=499a77f6cb30da7bf384d3a701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f24fc1a32d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=14193, ip=172.27.85.201, actor_id=499a77f6cb30da7bf384d3a701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f24fc1a32d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:20:15,062][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:20:19,140][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.392091991991038)
+[2025-02-11 13:20:19,141][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:20:22,548][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:20:22,548][flwr][INFO] - 
+[2025-02-11 13:20:22,548][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:20:22,548][flwr][INFO] - Run finished 1 round(s) in 14.80s
+[2025-02-11 13:20:22,549][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:20:22,549][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:20:22,549][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:20:22,549][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:20:22,549][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:20:22,549][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:20:22,549][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:20:22,549][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:20:22,549][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:20:22,549][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:20:22,549][flwr][INFO] - 
+[2025-02-11 13:20:43,947][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:20:43,947][flwr][INFO] - 
+[2025-02-11 13:20:43,948][flwr][INFO] - [INIT]
+[2025-02-11 13:20:43,948][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:20:43,949][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:20:50,444][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:20:50,445][flwr][INFO] - 
+[2025-02-11 13:20:50,445][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:20:50,445][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:20:57,485][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:20:57,486][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=15832, ip=172.27.85.201, actor_id=e1334b3e938373294051008701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f96d41aa510>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=15832, ip=172.27.85.201, actor_id=e1334b3e938373294051008701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f96d41aa510>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:20:57,487][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=15832, ip=172.27.85.201, actor_id=e1334b3e938373294051008701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f96d41aa510>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=15832, ip=172.27.85.201, actor_id=e1334b3e938373294051008701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f96d41aa510>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:20:57,767][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:20:57,767][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=15831, ip=172.27.85.201, actor_id=20f63c558a622c56dd4151ff01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fdafc1f2050>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=15831, ip=172.27.85.201, actor_id=20f63c558a622c56dd4151ff01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fdafc1f2050>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+[2025-02-11 13:20:57,768][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=15831, ip=172.27.85.201, actor_id=20f63c558a622c56dd4151ff01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fdafc1f2050>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 153, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 50, in get_noise_multiplier
+    raise ValueError(
+ValueError: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=15831, ip=172.27.85.201, actor_id=20f63c558a622c56dd4151ff01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fdafc1f2050>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: get_noise_multiplier takes as input EITHER a number of steps or a number of epochs
+
+[2025-02-11 13:20:57,860][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:21:01,802][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.356696589005878)
+[2025-02-11 13:21:01,802][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:21:04,407][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:21:04,407][flwr][INFO] - 
+[2025-02-11 13:21:04,408][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:21:04,408][flwr][INFO] - Run finished 1 round(s) in 13.96s
+[2025-02-11 13:21:04,408][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:21:04,408][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:21:04,408][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:21:04,408][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:21:04,408][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:21:04,408][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:21:04,408][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:21:04,408][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:21:04,409][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:21:04,409][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:21:04,409][flwr][INFO] - 
+[2025-02-11 13:21:51,001][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:21:51,002][flwr][INFO] - 
+[2025-02-11 13:21:51,002][flwr][INFO] - [INIT]
+[2025-02-11 13:21:51,003][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:21:51,003][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:21:57,400][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:21:57,401][flwr][INFO] - 
+[2025-02-11 13:21:57,401][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:21:57,401][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:22:05,008][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:22:05,008][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=17569, ip=172.27.85.201, actor_id=fdf78d36dd3c905e728869e401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fe70824aed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=17569, ip=172.27.85.201, actor_id=fdf78d36dd3c905e728869e401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fe70824aed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:22:05,010][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=17569, ip=172.27.85.201, actor_id=fdf78d36dd3c905e728869e401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fe70824aed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=17569, ip=172.27.85.201, actor_id=fdf78d36dd3c905e728869e401000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fe70824aed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:22:05,011][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:22:05,011][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=17568, ip=172.27.85.201, actor_id=e6f7d7650a35d6fec9e10ac801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fb5cc50b210>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=17568, ip=172.27.85.201, actor_id=e6f7d7650a35d6fec9e10ac801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fb5cc50b210>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:22:05,012][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=17568, ip=172.27.85.201, actor_id=e6f7d7650a35d6fec9e10ac801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fb5cc50b210>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=17568, ip=172.27.85.201, actor_id=e6f7d7650a35d6fec9e10ac801000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fb5cc50b210>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:22:05,016][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:22:09,244][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.843342987005599)
+[2025-02-11 13:22:09,244][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:22:11,749][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:22:11,750][flwr][INFO] - 
+[2025-02-11 13:22:11,750][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:22:11,750][flwr][INFO] - Run finished 1 round(s) in 14.35s
+[2025-02-11 13:22:11,750][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:22:11,750][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:22:11,750][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:22:11,750][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:22:11,751][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:22:11,751][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:22:11,751][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:22:11,751][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:22:11,751][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:22:11,751][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:22:11,751][flwr][INFO] - 
+[2025-02-11 13:22:41,646][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:22:41,647][flwr][INFO] - 
+[2025-02-11 13:22:41,647][flwr][INFO] - [INIT]
+[2025-02-11 13:22:41,647][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:22:41,648][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:22:48,457][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:22:48,457][flwr][INFO] - 
+[2025-02-11 13:22:48,458][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:22:48,458][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:22:55,609][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:22:55,609][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:22:55,610][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=19238, ip=172.27.85.201, actor_id=daa41943639f211eea725f0a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fac615a6ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19238, ip=172.27.85.201, actor_id=daa41943639f211eea725f0a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fac615a6ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:22:55,610][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=19239, ip=172.27.85.201, actor_id=f5366c184517e9eee29ad1f501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fa0901eaf90>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19239, ip=172.27.85.201, actor_id=f5366c184517e9eee29ad1f501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fa0901eaf90>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+[2025-02-11 13:22:55,612][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=19238, ip=172.27.85.201, actor_id=daa41943639f211eea725f0a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fac615a6ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19238, ip=172.27.85.201, actor_id=daa41943639f211eea725f0a01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fac615a6ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:22:55,613][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=19239, ip=172.27.85.201, actor_id=f5366c184517e9eee29ad1f501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fa0901eaf90>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 137, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 154, in train_DP_with_epsilon
+    noise_multiplier = get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/utils.py", line 63, in get_noise_multiplier
+    eps_high = accountant.get_epsilon(delta=target_delta, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 81, in get_epsilon
+    eps, _ = self.get_privacy_spent(delta=delta, alphas=alphas)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 55, in get_privacy_spent
+    [
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/rdp.py", line 56, in <listcomp>
+    privacy_analysis.compute_rdp(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in compute_rdp
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 284, in <listcomp>
+    rdp = np.array([_compute_rdp(q, noise_multiplier, order) for order in orders])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 259, in _compute_rdp
+    return _compute_log_a(q, sigma, alpha) / (alpha - 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 217, in _compute_log_a
+    return _compute_log_a_for_frac_alpha(q, sigma, alpha)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/opacus/accountants/analysis/rdp.py", line 165, in _compute_log_a_for_frac_alpha
+    z0 = sigma**2 * math.log(1 / q - 1) + 0.5
+                    ^^^^^^^^^^^^^^^^^^^
+ValueError: math domain error
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=19239, ip=172.27.85.201, actor_id=f5366c184517e9eee29ad1f501000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7fa0901eaf90>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: math domain error
+
+[2025-02-11 13:22:55,672][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:22:59,515][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.057698998018168)
+[2025-02-11 13:22:59,515][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:23:02,021][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:23:02,021][flwr][INFO] - 
+[2025-02-11 13:23:02,021][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:23:02,021][flwr][INFO] - Run finished 1 round(s) in 13.56s
+[2025-02-11 13:23:02,021][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:23:02,021][flwr][INFO] - 		round 1: 0.07690874735514323
+[2025-02-11 13:23:02,022][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:23:02,022][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:23:02,022][flwr][INFO] - 		round 1: 0.07228001170158387
+[2025-02-11 13:23:02,022][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:23:02,022][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:23:02,022][flwr][INFO] - 	 'clients_losses': [(1, 0.07690874735514323)]}
+[2025-02-11 13:23:02,022][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:23:02,022][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:23:02,022][flwr][INFO] - 
+[2025-02-11 13:28:53,966][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:28:53,967][flwr][INFO] - 
+[2025-02-11 13:28:53,967][flwr][INFO] - [INIT]
+[2025-02-11 13:28:53,968][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:28:53,968][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:29:00,355][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:29:00,356][flwr][INFO] - 
+[2025-02-11 13:29:00,356][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:29:00,356][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:29:07,571][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 13:29:07,573][flwr][ERROR] - ServerApp thread raised an exception: Key 'epsilon' is not in struct
+    full_key: epsilon
+    object_type=dict
+[2025-02-11 13:29:07,579][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/run_simulation.py", line 268, in server_th_with_start_checks
+    updated_context = _run(
+                      ^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/run_serverapp.py", line 63, in run
+    server_app(driver=driver, context=context)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/server_app.py", line 120, in __call__
+    start_driver(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/compat/app.py", line 87, in start_driver
+    hist = run_fl(
+           ^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/server.py", line 492, in run_fl
+    hist, elapsed_time = server.fit(
+                         ^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/server.py", line 115, in fit
+    res_fit = self.fit_round(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/server.py", line 251, in fit_round
+    ] = self.strategy.aggregate_fit(server_round, results, failures)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/strategy/fedavg.py", line 250, in aggregate_fit
+    metrics_aggregated = self.fit_metrics_aggregation_fn(fit_metrics)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/my_run_fn.py", line 68, in weighted_average
+    epsilon = cfg.epsilon
+              ^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 359, in __getattr__
+    self._format_and_raise(key=key, value=None, cause=e)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/_utils.py", line 819, in format_and_raise
+    _raise(ex, cause)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 442, in _get_impl
+    node = self._get_child(
+           ^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/basecontainer.py", line 73, in _get_child
+    child = self._get_node(
+            ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 475, in _get_node
+    self._validate_get(key)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 164, in _validate_get
+    self._format_and_raise(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+omegaconf.errors.ConfigAttributeError: Key 'epsilon' is not in struct
+    full_key: epsilon
+    object_type=dict
+
+[2025-02-11 13:30:03,782][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:30:03,782][flwr][INFO] - 
+[2025-02-11 13:30:03,783][flwr][INFO] - [INIT]
+[2025-02-11 13:30:03,783][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:30:03,784][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:30:10,097][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:30:10,098][flwr][INFO] - 
+[2025-02-11 13:30:10,098][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:30:10,098][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:30:17,212][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 13:30:21,659][flwr][INFO] - fit progress: (1, 0.07210063960552215, {'accuracy': 0.1135}, 11.561512649001088)
+[2025-02-11 13:30:21,660][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:30:24,866][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:30:24,866][flwr][INFO] - 
+[2025-02-11 13:30:24,866][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:30:24,866][flwr][INFO] - Run finished 1 round(s) in 14.77s
+[2025-02-11 13:30:24,866][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:30:24,867][flwr][INFO] - 		round 1: 0.0767542690038681
+[2025-02-11 13:30:24,867][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:30:24,867][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:30:24,867][flwr][INFO] - 		round 1: 0.07210063960552215
+[2025-02-11 13:30:24,867][flwr][INFO] - 	History (metrics, distributed, fit):
+[2025-02-11 13:30:24,867][flwr][INFO] - 	{'clients_epsilons': [(1, 0.1)], 'clients_losses': [(1, 2.312519574165344)]}
+[2025-02-11 13:30:24,867][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:30:24,867][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667)],
+[2025-02-11 13:30:24,867][flwr][INFO] - 	 'clients_losses': [(1, 0.0767542690038681)]}
+[2025-02-11 13:30:24,867][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:30:24,867][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.1135)]}
+[2025-02-11 13:30:24,868][flwr][INFO] - 
+[2025-02-11 13:31:12,727][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=1, no round_timeout
+[2025-02-11 13:31:12,727][flwr][INFO] - 
+[2025-02-11 13:31:12,728][flwr][INFO] - [INIT]
+[2025-02-11 13:31:12,728][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:31:12,729][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:31:19,545][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:31:19,545][flwr][INFO] - 
+[2025-02-11 13:31:19,545][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:31:19,546][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:31:39,783][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 13:31:43,731][flwr][INFO] - fit progress: (1, 0.017966982576809825, {'accuracy': 0.8686}, 24.18599181700847)
+[2025-02-11 13:31:43,732][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:31:47,138][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:31:47,139][flwr][INFO] - 
+[2025-02-11 13:31:47,139][flwr][INFO] - [SUMMARY]
+[2025-02-11 13:31:47,139][flwr][INFO] - Run finished 1 round(s) in 27.59s
+[2025-02-11 13:31:47,139][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 13:31:47,139][flwr][INFO] - 		round 1: 0.018893286425154657
+[2025-02-11 13:31:47,140][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 13:31:47,140][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 13:31:47,140][flwr][INFO] - 		round 1: 0.017966982576809825
+[2025-02-11 13:31:47,140][flwr][INFO] - 	History (metrics, distributed, fit):
+[2025-02-11 13:31:47,140][flwr][INFO] - 	{'clients_epsilons': [(1, 0.1)], 'clients_losses': [(1, 1.0886612092331052)]}
+[2025-02-11 13:31:47,140][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 13:31:47,140][flwr][INFO] - 	{'clients_accuracies': [(1, 0.8580833333333332)],
+[2025-02-11 13:31:47,140][flwr][INFO] - 	 'clients_losses': [(1, 0.018893286425154657)]}
+[2025-02-11 13:31:47,140][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 13:31:47,140][flwr][INFO] - 	{'accuracy': [(0, 0.1135), (1, 0.8686)]}
+[2025-02-11 13:31:47,140][flwr][INFO] - 

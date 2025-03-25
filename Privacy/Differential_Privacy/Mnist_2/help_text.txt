@@ -1,0 +1,24 @@
+#===========================================
+cd Differential_Privacy/Mnist_2/opacus_fl
+conda deactivate
+conda activate flwr_25_DP
+clear; python main.py
+
+#============================================
+cd Differential_Privacy/Mnist_2/run_test
+clear
+chmod +x run_tests_DP.sh
+./run_tests_DP.sh
+
+#==============
+cd "$(ls -td outputs/dif_clients_* | head -1)"  # Go to the most recent Hydra output folder
+tail -f server_evaluation_history.json
+
+#===========================
+clear
+cd Differential_Privacy/Mnist_2/run_test/
+chmod +x monitor_2.sh
+./monitor_2.sh
+
+
+cd Differential_Privacy/Mnist_2/run_test/

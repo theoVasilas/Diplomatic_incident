@@ -1,0 +1,40 @@
+# Hydra settings
+hydra:
+  run:
+    dir: outputs/dif_clients_${now:%m-%d}/c${num_clients}_r${ROUNDS}_n${max_grad_norm}_d${target_delta}_n${noise_multiplier}/s${SEED}
+    # dir: outputs/mesure_higest_acc/Clients_${num_clients}/SEED_${SEED}
+    # dir: outputs/Clients_${num_clients}/SEED_${SEED}
+    # dir: outputs/ROUNDS_${ROUNDS}/SEED_${SEED}
+
+
+
+# General
+SEED: 101
+
+# Data loader
+BATCH_SIZE: 32
+num_clients: 2
+fraction_fit : 1
+num_dataset_partitions: 2
+
+# Simulation parameters
+ROUNDS: 1
+local_epochs: 1
+
+# Train
+model: Net_Mnist
+dataset: Mnist
+# dataset: "mnist" "cifar10"
+
+# Optimizer
+learning_rate: 0.01
+momentum: 0.9
+
+#Opacus
+Dp_enabel         : True # True # False
+noise_multiplier  : 3.0
+clipping          : "flat" #  (flat or per_layer or adaptive)
+max_grad_norm     : 1.0
+target_delta      : 1e-1
+Dp_e_enabel       : True # True # False
+target_epsilon    : 0.1

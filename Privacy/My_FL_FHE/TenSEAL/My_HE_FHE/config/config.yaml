@@ -1,0 +1,29 @@
+# Hydra settings
+hydra:
+  run:
+    dir: outputs/SEED_${SEED}_clients_${num_clients}
+
+# General
+SEED: 111
+
+# Data loader
+BATCH_SIZE: 32
+num_clients: 5
+num_dataset_partitions: 100
+
+# Simulation parameters
+ROUNDS: 10
+local_epochs: 1
+
+# Train
+model: Net_Mnist
+dataset: Mnist
+
+# Optimizer
+learning_rate: 0.01
+momentum: 0.9
+
+# CKKS if enabled
+degree: 4096 # 2048
+# coeff_mod_bit_sizes: [20, 20, 14]
+# pow: 40

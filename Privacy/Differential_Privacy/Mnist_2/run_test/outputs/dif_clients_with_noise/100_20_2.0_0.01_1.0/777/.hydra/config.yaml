@@ -1,0 +1,15 @@
+SEED: 777
+BATCH_SIZE: 32
+num_clients: 100
+fraction_fit: 1
+num_dataset_partitions: 100
+ROUNDS: 20
+local_epochs: 1
+model: Net_Mnist
+dataset: Mnist
+learning_rate: 0.01
+momentum: 0.9
+Dp_enabel: true
+noise_multiplier: 1.0
+max_grad_norm: 2.0
+target_delta: 0.01

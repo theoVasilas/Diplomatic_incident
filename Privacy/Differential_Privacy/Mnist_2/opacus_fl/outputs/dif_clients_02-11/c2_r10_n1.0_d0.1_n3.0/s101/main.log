@@ -1,0 +1,1140 @@
+[2025-02-11 10:42:22,125][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=10, no round_timeout
+[2025-02-11 10:42:22,125][flwr][INFO] - 
+[2025-02-11 10:42:22,126][flwr][INFO] - [INIT]
+[2025-02-11 10:42:22,126][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 10:42:22,126][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 10:42:29,264][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 10:42:29,264][flwr][INFO] - 
+[2025-02-11 10:42:29,264][flwr][INFO] - [ROUND 1]
+[2025-02-11 10:42:29,264][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:42:36,379][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:42:40,420][flwr][INFO] - fit progress: (1, 0.0721466249704361, {'accuracy': 0.1135}, 11.1556466500042)
+[2025-02-11 10:42:40,420][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:42:42,825][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:42:42,826][flwr][INFO] - 
+[2025-02-11 10:42:42,826][flwr][INFO] - [ROUND 2]
+[2025-02-11 10:42:42,827][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:42:45,333][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:42:49,428][flwr][INFO] - fit progress: (2, 0.07206456682682037, {'accuracy': 0.1135}, 20.163697939016856)
+[2025-02-11 10:42:49,428][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:42:51,733][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:42:51,734][flwr][INFO] - 
+[2025-02-11 10:42:51,734][flwr][INFO] - [ROUND 3]
+[2025-02-11 10:42:51,734][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:42:54,039][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:42:58,044][flwr][INFO] - fit progress: (3, 0.07203458368778229, {'accuracy': 0.1137}, 28.78009341302095)
+[2025-02-11 10:42:58,044][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:00,350][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:00,350][flwr][INFO] - 
+[2025-02-11 10:43:00,350][flwr][INFO] - [ROUND 4]
+[2025-02-11 10:43:00,351][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:02,456][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:06,163][flwr][INFO] - fit progress: (4, 0.07225616652965546, {'accuracy': 0.1157}, 36.8989772030036)
+[2025-02-11 10:43:06,163][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:08,267][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:08,268][flwr][INFO] - 
+[2025-02-11 10:43:08,268][flwr][INFO] - [ROUND 5]
+[2025-02-11 10:43:08,268][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:10,873][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:14,617][flwr][INFO] - fit progress: (5, 0.07271588773727417, {'accuracy': 0.1334}, 45.35360380500788)
+[2025-02-11 10:43:14,618][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:16,823][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:16,823][flwr][INFO] - 
+[2025-02-11 10:43:16,823][flwr][INFO] - [ROUND 6]
+[2025-02-11 10:43:16,823][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:18,928][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:22,762][flwr][INFO] - fit progress: (6, 0.0724484626531601, {'accuracy': 0.1662}, 53.497657269006595)
+[2025-02-11 10:43:22,762][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:24,667][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:24,667][flwr][INFO] - 
+[2025-02-11 10:43:24,668][flwr][INFO] - [ROUND 7]
+[2025-02-11 10:43:24,668][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:26,873][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:30,620][flwr][INFO] - fit progress: (7, 0.0751619861483574, {'accuracy': 0.2275}, 61.35562714500702)
+[2025-02-11 10:43:30,620][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:32,424][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:32,425][flwr][INFO] - 
+[2025-02-11 10:43:32,425][flwr][INFO] - [ROUND 8]
+[2025-02-11 10:43:32,425][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:34,630][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:38,369][flwr][INFO] - fit progress: (8, 0.08988599078655243, {'accuracy': 0.2657}, 69.1055170489999)
+[2025-02-11 10:43:38,370][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:40,174][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:40,175][flwr][INFO] - 
+[2025-02-11 10:43:40,175][flwr][INFO] - [ROUND 9]
+[2025-02-11 10:43:40,175][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:42,379][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:46,111][flwr][INFO] - fit progress: (9, 0.12203859128952026, {'accuracy': 0.2819}, 76.8470333450241)
+[2025-02-11 10:43:46,111][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:48,016][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:48,016][flwr][INFO] - 
+[2025-02-11 10:43:48,016][flwr][INFO] - [ROUND 10]
+[2025-02-11 10:43:48,016][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:50,121][flwr][INFO] - aggregate_fit: received 2 results and 0 failures
+[2025-02-11 10:43:53,765][flwr][INFO] - fit progress: (10, 0.1745502836704254, {'accuracy': 0.2915}, 84.50118125299923)
+[2025-02-11 10:43:53,765][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 10:43:55,670][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 10:43:55,670][flwr][INFO] - 
+[2025-02-11 10:43:55,670][flwr][INFO] - [SUMMARY]
+[2025-02-11 10:43:55,670][flwr][INFO] - Run finished 10 round(s) in 86.41s
+[2025-02-11 10:43:55,671][flwr][INFO] - 	History (loss, distributed):
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 1: 0.07683673401673635
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 2: 0.07674535214900971
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 3: 0.07652774552504221
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 4: 0.07683386206626892
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 5: 0.07794638077418009
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 6: 0.07954451541105906
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 7: 0.08671971559524536
+[2025-02-11 10:43:55,671][flwr][INFO] - 		round 8: 0.10790003736813863
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 9: 0.15109055836995444
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 10: 0.22241321404774983
+[2025-02-11 10:43:55,672][flwr][INFO] - 	History (loss, centralized):
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 0: 0.07228001170158387
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 1: 0.0721466249704361
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 2: 0.07206456682682037
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 3: 0.07203458368778229
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 4: 0.07225616652965546
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 5: 0.07271588773727417
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 6: 0.0724484626531601
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 7: 0.0751619861483574
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 8: 0.08988599078655243
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 9: 0.12203859128952026
+[2025-02-11 10:43:55,672][flwr][INFO] - 		round 10: 0.1745502836704254
+[2025-02-11 10:43:55,672][flwr][INFO] - 	History (metrics, distributed, fit):
+[2025-02-11 10:43:55,673][flwr][INFO] - 	{'clients_epsilons': [(1, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (2, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (3, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (4, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (5, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (6, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (7, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (8, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (9, -0.09031471938955753),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                      (10, -0.09031471938955753)],
+[2025-02-11 10:43:55,673][flwr][INFO] - 	 'clients_losses': [(1, 2.313818836212158),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                    (2, 2.306738543510437),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                    (3, 2.3006893157958985),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                    (4, 2.2930473963419598),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                    (5, 2.2918938716252644),
+[2025-02-11 10:43:55,673][flwr][INFO] - 	                    (6, 2.286053919792175),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                    (7, 2.284010815620422),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                    (8, 2.465739341576894),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                    (9, 3.0748841683069865),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                    (10, 4.2481330871582035)]}
+[2025-02-11 10:43:55,674][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-11 10:43:55,674][flwr][INFO] - 	{'clients_accuracies': [(1, 0.09166666666666667),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (2, 0.09166666666666667),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (3, 0.09583333333333333),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (4, 0.11249999999999999),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (5, 0.1),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (6, 0.125),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (7, 0.18333333333333335),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (8, 0.22916666666666669),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (9, 0.25),
+[2025-02-11 10:43:55,674][flwr][INFO] - 	                        (10, 0.25416666666666665)],
+[2025-02-11 10:43:55,674][flwr][INFO] - 	 'clients_losses': [(1, 0.07683673401673635),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (2, 0.07674535214900971),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (3, 0.07652774552504221),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (4, 0.07683386206626892),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (5, 0.07794638077418009),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (6, 0.07954451541105906),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (7, 0.08671971559524536),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (8, 0.10790003736813863),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (9, 0.15109055836995444),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	                    (10, 0.22241321404774983)]}
+[2025-02-11 10:43:55,675][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-11 10:43:55,675][flwr][INFO] - 	{'accuracy': [(0, 0.1135),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	              (1, 0.1135),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	              (2, 0.1135),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	              (3, 0.1137),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	              (4, 0.1157),
+[2025-02-11 10:43:55,675][flwr][INFO] - 	              (5, 0.1334),
+[2025-02-11 10:43:55,676][flwr][INFO] - 	              (6, 0.1662),
+[2025-02-11 10:43:55,676][flwr][INFO] - 	              (7, 0.2275),
+[2025-02-11 10:43:55,676][flwr][INFO] - 	              (8, 0.2657),
+[2025-02-11 10:43:55,676][flwr][INFO] - 	              (9, 0.2819),
+[2025-02-11 10:43:55,676][flwr][INFO] - 	              (10, 0.2915)]}
+[2025-02-11 10:43:55,676][flwr][INFO] - 
+[2025-02-11 13:02:05,325][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=10, no round_timeout
+[2025-02-11 13:02:05,326][flwr][INFO] - 
+[2025-02-11 13:02:05,327][flwr][INFO] - [INIT]
+[2025-02-11 13:02:05,327][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:02:05,327][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:02:11,877][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:02:11,877][flwr][INFO] - 
+[2025-02-11 13:02:11,877][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:02:11,877][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:02:18,944][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:02:18,945][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=3166, ip=172.27.85.201, actor_id=3b3ab8c84768c51ef9ef368d01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f61e4cc1a10>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 133, in train_DP_with_epsilon
+    optimizer.zero_grad()
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'zero_grad'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=3166, ip=172.27.85.201, actor_id=3b3ab8c84768c51ef9ef368d01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f61e4cc1a10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'float' object has no attribute 'zero_grad'
+[2025-02-11 13:02:18,947][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=3166, ip=172.27.85.201, actor_id=3b3ab8c84768c51ef9ef368d01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f61e4cc1a10>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 133, in train_DP_with_epsilon
+    optimizer.zero_grad()
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'zero_grad'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=3166, ip=172.27.85.201, actor_id=3b3ab8c84768c51ef9ef368d01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f61e4cc1a10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'float' object has no attribute 'zero_grad'
+
+[2025-02-11 13:02:19,075][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:02:19,076][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=3167, ip=172.27.85.201, actor_id=52e07e8c0529c0c457dc69cd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f98bc616ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 133, in train_DP_with_epsilon
+    optimizer.zero_grad()
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'zero_grad'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=3167, ip=172.27.85.201, actor_id=52e07e8c0529c0c457dc69cd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f98bc616ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'float' object has no attribute 'zero_grad'
+[2025-02-11 13:02:19,076][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=3167, ip=172.27.85.201, actor_id=52e07e8c0529c0c457dc69cd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f98bc616ed0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 133, in train_DP_with_epsilon
+    optimizer.zero_grad()
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'zero_grad'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=3167, ip=172.27.85.201, actor_id=52e07e8c0529c0c457dc69cd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f98bc616ed0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'float' object has no attribute 'zero_grad'
+
+[2025-02-11 13:02:19,092][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:02:23,265][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.387646877003135)
+[2025-02-11 13:02:23,265][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:02:25,670][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:02:25,671][flwr][INFO] - 
+[2025-02-11 13:02:25,671][flwr][INFO] - [ROUND 2]
+[2025-02-11 13:02:25,671][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:05:41,699][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=10, no round_timeout
+[2025-02-11 13:05:41,700][flwr][INFO] - 
+[2025-02-11 13:05:41,701][flwr][INFO] - [INIT]
+[2025-02-11 13:05:41,701][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-11 13:05:41,701][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-11 13:05:47,963][flwr][INFO] - initial parameters (loss, other metrics): 0.07228001170158387, {'accuracy': 0.1135}
+[2025-02-11 13:05:47,963][flwr][INFO] - 
+[2025-02-11 13:05:47,963][flwr][INFO] - [ROUND 1]
+[2025-02-11 13:05:47,963][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:05:54,942][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:05:54,942][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:05:54,943][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:05:55,121][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:05:55,121][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:05:55,122][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:05:55,176][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:05:59,034][flwr][INFO] - fit progress: (1, 0.07228001170158387, {'accuracy': 0.1135}, 11.071105197013821)
+[2025-02-11 13:05:59,034][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:01,339][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:06:01,340][flwr][INFO] - 
+[2025-02-11 13:06:01,340][flwr][INFO] - [ROUND 2]
+[2025-02-11 13:06:01,340][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:03,830][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:03,830][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:03,831][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:03,860][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:03,860][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:03,861][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:03,945][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:06:07,811][flwr][INFO] - fit progress: (2, 0.07228001170158387, {'accuracy': 0.1135}, 19.847767358005513)
+[2025-02-11 13:06:07,811][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:10,017][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:06:10,017][flwr][INFO] - 
+[2025-02-11 13:06:10,017][flwr][INFO] - [ROUND 3]
+[2025-02-11 13:06:10,017][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:12,669][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:12,670][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:12,671][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:12,698][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:12,699][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:12,699][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:12,724][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:06:16,354][flwr][INFO] - fit progress: (3, 0.07228001170158387, {'accuracy': 0.1135}, 28.390462858020328)
+[2025-02-11 13:06:16,354][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:18,559][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:06:18,559][flwr][INFO] - 
+[2025-02-11 13:06:18,559][flwr][INFO] - [ROUND 4]
+[2025-02-11 13:06:18,560][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:21,007][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:21,007][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:21,007][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5303, ip=172.27.85.201, actor_id=da28d7d751ec9e1886a6035701000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f2680496350>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:21,043][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-11 13:06:21,043][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+[2025-02-11 13:06:21,043][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 136, in fit
+    results = train_DP_with_epsilon(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/train_utils.py", line 152, in train_DP_with_epsilon
+    noise_multiplier = privacy_engine.get_noise_multiplier(  target_epsilon = target_epsilon,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=5304, ip=172.27.85.201, actor_id=1a203d96cb50b9c86d7618fd01000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f89e8eeb8d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 'PrivacyEngine' object has no attribute 'get_noise_multiplier'
+
+[2025-02-11 13:06:21,065][flwr][INFO] - aggregate_fit: received 0 results and 2 failures
+[2025-02-11 13:06:24,783][flwr][INFO] - fit progress: (4, 0.07228001170158387, {'accuracy': 0.1135}, 36.819759509002324)
+[2025-02-11 13:06:24,783][flwr][INFO] - configure_evaluate: strategy sampled 2 clients (out of 2)
+[2025-02-11 13:06:26,888][flwr][INFO] - aggregate_evaluate: received 2 results and 0 failures
+[2025-02-11 13:06:26,888][flwr][INFO] - 
+[2025-02-11 13:06:26,889][flwr][INFO] - [ROUND 5]
+[2025-02-11 13:06:26,889][flwr][INFO] - configure_fit: strategy sampled 2 clients (out of 2)

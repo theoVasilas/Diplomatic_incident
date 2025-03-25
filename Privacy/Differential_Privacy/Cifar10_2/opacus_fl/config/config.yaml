@@ -1,0 +1,45 @@
+# Hydra settings
+hydra:
+  run:
+    dir: outputs/${folder_name}
+
+    # outputs/DP_n${now:%m-%d}/C${num_clients}_R${ROUNDS}_mgn${max_grad_norm}_td${target_delta}_nm${noise_multiplier}/s${SEED}
+    # outputs/DP_e${now:%m-%d}/C${num_clients}_R${ROUNDS}_mgn${max_grad_norm}_td${target_delta}_te${target_epsilon}/s${SEED}
+    # outputs/FL_${now:%m-%d}/C${num_clients}_R${ROUNDS}/s${SEED}
+
+
+folder_name: "FL_tests" #DP_e #FL_
+
+# General
+num_cpus  : 1
+num_gpus  : 0.0
+SEED: 101
+
+# Data loader
+BATCH_SIZE: 32
+num_clients: 10
+fraction_fit : 1
+num_dataset_partitions: ${num_clients} #100
+
+# Simulation parameters
+ROUNDS: 20
+local_epochs: 1
+
+# Train
+model: Net_Mnist
+dataset: Mnist
+# dataset: "mnist" "cifar10"
+
+# Optimizer
+learning_rate: 0.01
+momentum: 0.9
+
+# Opacus 
+Dp_enabel         : False # True # False
+noise_multiplier  : 0.5
+clipping          : "flat" #  (flat or per_layer or adaptive)
+max_grad_norm     : 0.1
+target_delta      : 1e-2
+Dp_e_enabel       : False # True # False
+target_epsilon    : 1.0 # 0.1 0.2 0.5 0.8 1.0
+

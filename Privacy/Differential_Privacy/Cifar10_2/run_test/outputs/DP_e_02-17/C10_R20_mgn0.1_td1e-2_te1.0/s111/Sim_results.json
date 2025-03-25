@@ -1,0 +1,2 @@
+{"num_rounds": 20, "duration": 370.55242556502344, "emissions": 0.001222691784468632}
+{"folder_name": "DP_e_02-17/C10_R20_mgn0.1_td1e-2_te1.0/s111", "num_cpus": 1, "num_gpus": 0.0, "SEED": 111, "BATCH_SIZE": 32, "num_clients": 10, "fraction_fit": 1, "num_dataset_partitions": 100, "ROUNDS": 20, "local_epochs": 1, "model": "Net_Mnist", "dataset": "Mnist", "learning_rate": 0.01, "momentum": 0.9, "Dp_enabel": true, "noise_multiplier": 1.0, "clipping": "flat", "max_grad_norm": 2.0, "target_delta": 0.01, "Dp_e_enabel": true, "target_epsilon": 1.0}

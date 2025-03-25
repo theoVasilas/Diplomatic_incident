@@ -1,0 +1,27 @@
+#===========================================
+cd Differential_Privacy/Mnist_2/opacus_fl
+conda deactivate
+conda activate flwr_25_DP
+clear; python main.py
+
+
+#===========================
+cd ~/Diplomatic_incident/Differential_Privacy/Mnist_2/run_test
+chmod +x monitor_2.sh
+./monitor_2.sh
+
+
+#==============
+cd "$(ls -td outputs/dif_clients_* | head -1)"  # Go to the most recent Hydra output folder
+tail -f server_evaluation_history.json
+
+
+#================TEST==========================
+cd /home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/envs
+conda env create -f flwr_25_DP_new.yml
+
+cd Differential_Privacy/Mnist_2/opacus_fl
+conda activate flwr_25_DP_new
+clear; python main.py
+
+# ------------τρεχει σωστα-----------

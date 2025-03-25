@@ -1,0 +1,7 @@
+cd /home/theo_ubuntu/Diplomatic_incident/HE_tenSeal/Theo_Sim_batch_CKKS_2
+conda deactivate
+conda activate flower_25
+
+
+
+clear; python Bach_FL_CKKS/main.py

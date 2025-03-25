@@ -1,0 +1,21 @@
+BATCH_SIZE: 32
+CKKs_enable: true
+ROUNDS: 10
+SEED: 222
+coeff_mod_bit_sizes:
+- 40
+- 21
+- 21
+- 40
+dataset: ylecun/mnist
+degree: 32768
+hydra:
+  run:
+    dir: ./outputs
+learning_rate: 0.01
+local_epochs: 1
+model: Net_Mnist
+momentum: 0.9
+num_clients: 10
+num_dataset_partitions: 100
+pow: 21

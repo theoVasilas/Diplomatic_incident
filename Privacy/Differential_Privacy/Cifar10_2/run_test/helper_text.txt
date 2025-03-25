@@ -1,0 +1,16 @@
+#============================================
+cd ~/Diplomatic_incident/Differential_Privacy/Mnist_2/run_test
+
+conda activate flwr_25_DP
+
+chmod +x run_tests_DP_n.sh
+./run_tests_DP_n.sh
+
+chmod +x run_tests_DP_e.sh
+./run_tests_DP_e.sh
+
+chmod +x run_tests_DP_clients.sh
+./run_tests_DP_clients.sh
+
+chmod +x run_tests_FL_clients.sh
+./run_tests_FL_clients.sh

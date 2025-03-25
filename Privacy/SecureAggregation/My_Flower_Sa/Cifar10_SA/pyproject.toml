@@ -1,0 +1,34 @@
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project]
+name = "Flower_sa"
+version = "1.0.0"
+description = "Central Differential Privacy and Secure Aggregation in Flower"
+license = "Apache-2.0"
+dependencies = [ "flwr[simulation]>=1.14.0", "flwr-datasets[vision]>=0.3.0", "torch==2.2.1", "torchvision==0.17.1",]
+
+[tool.flwr.app]
+publisher = "flwrlabs"
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.app.components]
+serverapp = "Flower_sa.server_app:app"
+clientapp = "Flower_sa.client_app:app"
+
+[tool.flwr.app.config]
+num-shares = 0.5
+reconstruction-threshold = 0.7
+clipping-range = 1.0
+quantization-range = 4194304
+SEED = 1337
+num-rounds = 20
+
+[tool.flwr.federations.local-simulation.options]
+num-supernodes = 50
+
+[tool.hatch.build.targets.wheel]
+packages = [ ".",]

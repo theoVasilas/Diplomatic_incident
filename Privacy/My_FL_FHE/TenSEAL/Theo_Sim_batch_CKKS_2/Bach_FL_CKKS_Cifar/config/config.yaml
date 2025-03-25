@@ -1,0 +1,26 @@
+BATCH_SIZE: 32
+CKKs_enable: true
+ROUNDS: 25
+SEED: 101
+coeff_mod_bit_sizes:
+- 40
+- 21
+- 21
+- 40
+dataset: uoft-cs/cifar10
+degree: 32768
+hydra:
+  run:
+    dir: ./outputs
+learning_rate: 0.01
+local_epochs: 1
+model: Net_Mnist
+momentum: 0.9
+normalize:
+  mean:
+  - 0.1307
+  std:
+  - 0.3081
+num_clients: 10
+num_dataset_partitions: 100
+pow: 21

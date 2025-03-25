@@ -1,0 +1,691 @@
+[2025-02-17 19:15:29,734][flwr][INFO] - Starting Flower ServerApp, config: num_rounds=20, no round_timeout
+[2025-02-17 19:15:29,734][flwr][INFO] - 
+[2025-02-17 19:15:29,737][flwr][INFO] - [INIT]
+[2025-02-17 19:15:29,738][flwr][INFO] - Using initial global parameters provided by strategy
+[2025-02-17 19:15:29,738][flwr][INFO] - Starting evaluation of initial global parameters
+[2025-02-17 19:15:36,095][flwr][INFO] - initial parameters (loss, other metrics): 0.07207710530757903, {'accuracy': 0.1028}
+[2025-02-17 19:15:36,096][flwr][INFO] - 
+[2025-02-17 19:15:36,096][flwr][INFO] - [ROUND 1]
+[2025-02-17 19:15:36,096][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:15:46,618][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:15:51,107][flwr][INFO] - fit progress: (1, 0.07152409455776215, {'accuracy': 0.1041}, 15.011200793989701)
+[2025-02-17 19:15:51,107][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:15:54,821][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:15:54,821][flwr][INFO] - 
+[2025-02-17 19:15:54,821][flwr][INFO] - [ROUND 2]
+[2025-02-17 19:15:54,822][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:01,134][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:16:05,583][flwr][INFO] - fit progress: (2, 0.07015293431282044, {'accuracy': 0.1933}, 29.48765173999709)
+[2025-02-17 19:16:05,584][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:09,491][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:16:09,491][flwr][INFO] - 
+[2025-02-17 19:16:09,492][flwr][INFO] - [ROUND 3]
+[2025-02-17 19:16:09,492][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:14,802][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:16:19,494][flwr][INFO] - fit progress: (3, 0.06574790472984314, {'accuracy': 0.2612}, 43.39809205799247)
+[2025-02-17 19:16:19,494][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:23,602][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:16:23,602][flwr][INFO] - 
+[2025-02-17 19:16:23,602][flwr][INFO] - [ROUND 4]
+[2025-02-17 19:16:23,603][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:29,014][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:16:33,308][flwr][INFO] - fit progress: (4, 0.06694270030260085, {'accuracy': 0.312}, 57.21176928599016)
+[2025-02-17 19:16:33,308][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:37,516][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:16:37,516][flwr][INFO] - 
+[2025-02-17 19:16:37,516][flwr][INFO] - [ROUND 5]
+[2025-02-17 19:16:37,517][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:42,628][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:16:47,154][flwr][INFO] - fit progress: (5, 0.10330783770084381, {'accuracy': 0.3397}, 71.05794782500016)
+[2025-02-17 19:16:47,154][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:51,264][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:16:51,264][flwr][INFO] - 
+[2025-02-17 19:16:51,264][flwr][INFO] - [ROUND 6]
+[2025-02-17 19:16:51,265][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:16:56,876][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:17:01,272][flwr][INFO] - fit progress: (6, 0.18978219552040101, {'accuracy': 0.3545}, 85.1762424960034)
+[2025-02-17 19:17:01,272][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:08,384][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:17:08,384][flwr][INFO] - 
+[2025-02-17 19:17:08,384][flwr][INFO] - [ROUND 7]
+[2025-02-17 19:17:08,385][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:13,496][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:17:17,751][flwr][INFO] - fit progress: (7, 0.3553947733879089, {'accuracy': 0.3556}, 101.65507594801602)
+[2025-02-17 19:17:17,751][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:21,561][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:17:21,561][flwr][INFO] - 
+[2025-02-17 19:17:21,561][flwr][INFO] - [ROUND 8]
+[2025-02-17 19:17:21,561][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:26,571][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:17:30,691][flwr][INFO] - fit progress: (8, 0.6405046975135803, {'accuracy': 0.3462}, 114.59556021200842)
+[2025-02-17 19:17:30,692][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:34,500][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:17:34,500][flwr][INFO] - 
+[2025-02-17 19:17:34,500][flwr][INFO] - [ROUND 9]
+[2025-02-17 19:17:34,500][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:39,811][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:17:44,298][flwr][INFO] - fit progress: (9, 1.089525506210327, {'accuracy': 0.3382}, 128.2024438639928)
+[2025-02-17 19:17:44,298][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:48,010][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:17:48,011][flwr][INFO] - 
+[2025-02-17 19:17:48,011][flwr][INFO] - [ROUND 10]
+[2025-02-17 19:17:48,011][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:17:53,421][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:17:57,545][flwr][INFO] - fit progress: (10, 1.7694442312240601, {'accuracy': 0.3329}, 141.44877668301342)
+[2025-02-17 19:17:57,545][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:01,654][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:18:01,655][flwr][INFO] - 
+[2025-02-17 19:18:01,655][flwr][INFO] - [ROUND 11]
+[2025-02-17 19:18:01,655][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:06,672][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:18:11,100][flwr][INFO] - fit progress: (11, 2.7552894790649414, {'accuracy': 0.3277}, 155.00434007699369)
+[2025-02-17 19:18:11,100][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:15,213][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:18:15,213][flwr][INFO] - 
+[2025-02-17 19:18:15,213][flwr][INFO] - [ROUND 12]
+[2025-02-17 19:18:15,214][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:20,727][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:18:25,070][flwr][INFO] - fit progress: (12, 4.14372657623291, {'accuracy': 0.3255}, 168.97429809501045)
+[2025-02-17 19:18:25,070][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:30,184][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:18:30,184][flwr][INFO] - 
+[2025-02-17 19:18:30,184][flwr][INFO] - [ROUND 13]
+[2025-02-17 19:18:30,184][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:35,396][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:18:39,564][flwr][INFO] - fit progress: (13, 6.043834706115723, {'accuracy': 0.3202}, 183.46809190500062)
+[2025-02-17 19:18:39,564][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:43,273][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:18:43,274][flwr][INFO] - 
+[2025-02-17 19:18:43,274][flwr][INFO] - [ROUND 14]
+[2025-02-17 19:18:43,274][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:48,684][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:18:52,775][flwr][INFO] - fit progress: (14, 8.59021713104248, {'accuracy': 0.3181}, 196.67971689999104)
+[2025-02-17 19:18:52,776][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:18:56,783][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:18:56,784][flwr][INFO] - 
+[2025-02-17 19:18:56,784][flwr][INFO] - [ROUND 15]
+[2025-02-17 19:18:56,784][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:19:02,295][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:19:06,339][flwr][INFO] - fit progress: (15, 11.921370974731445, {'accuracy': 0.317}, 210.24288067698944)
+[2025-02-17 19:19:06,339][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:19:10,647][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:19:10,647][flwr][INFO] - 
+[2025-02-17 19:19:10,647][flwr][INFO] - [ROUND 16]
+[2025-02-17 19:19:10,647][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:19:15,958][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:19:20,091][flwr][INFO] - fit progress: (16, 16.21119306945801, {'accuracy': 0.3151}, 223.99481642901083)
+[2025-02-17 19:19:20,091][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:19:24,001][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:19:24,001][flwr][INFO] - 
+[2025-02-17 19:19:24,001][flwr][INFO] - [ROUND 17]
+[2025-02-17 19:19:24,001][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:19:48,535][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-17 19:19:48,535][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 201, in client_fn
+    trainloader, valloader, _= load_datasets(cfg, partition_id)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/data_utils.py", line 27, in load_datasets
+    partition = fds.load_partition(partition_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 342, in __init__
+    self.config, self.config_id = self._create_builder_config(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 771, in resolve
+    resolve_pattern(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 388, in resolve_pattern
+    for filepath, info in fs.glob(pattern, detail=True, **glob_kwargs).items()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 521, in glob
+    return super().glob(path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 611, in glob
+    allpaths = self.find(root, maxdepth=depth, withdirs=True, detail=True, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 556, in find
+    return super().find(
+           ^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 502, in find
+    out[path] = self.info(path)
+                ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 719, in info
+    paths_info = self._api.get_paths_info(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_api.py", line 3303, in get_paths_info
+    hf_raise_for_status(response)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+[2025-02-17 19:19:48,537][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 201, in client_fn
+    trainloader, valloader, _= load_datasets(cfg, partition_id)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/data_utils.py", line 27, in load_datasets
+    partition = fds.load_partition(partition_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 342, in __init__
+    self.config, self.config_id = self._create_builder_config(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 771, in resolve
+    resolve_pattern(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 388, in resolve_pattern
+    for filepath, info in fs.glob(pattern, detail=True, **glob_kwargs).items()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 521, in glob
+    return super().glob(path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 611, in glob
+    allpaths = self.find(root, maxdepth=depth, withdirs=True, detail=True, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 556, in find
+    return super().find(
+           ^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 502, in find
+    out[path] = self.info(path)
+                ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 719, in info
+    paths_info = self._api.get_paths_info(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_api.py", line 3303, in get_paths_info
+    hf_raise_for_status(response)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31489, ip=172.27.85.201, actor_id=536fbb02a980c0631a42141201000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f1a9c5ee110>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+[2025-02-17 19:21:28,347][flwr][ERROR] - An exception was raised when processing a message by RayBackend
+[2025-02-17 19:21:28,347][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 201, in client_fn
+    trainloader, valloader, _= load_datasets(cfg, partition_id)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/data_utils.py", line 27, in load_datasets
+    partition = fds.load_partition(partition_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 342, in __init__
+    self.config, self.config_id = self._create_builder_config(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 771, in resolve
+    resolve_pattern(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 388, in resolve_pattern
+    for filepath, info in fs.glob(pattern, detail=True, **glob_kwargs).items()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 521, in glob
+    return super().glob(path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 611, in glob
+    allpaths = self.find(root, maxdepth=depth, withdirs=True, detail=True, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 556, in find
+    return super().find(
+           ^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 502, in find
+    out[path] = self.info(path)
+                ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 719, in info
+    paths_info = self._api.get_paths_info(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_api.py", line 3303, in get_paths_info
+    hf_raise_for_status(response)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+[2025-02-17 19:21:28,348][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/vce_api.py", line 112, in worker
+    out_mssg, updated_context = backend.process_message(message, context)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 187, in process_message
+    raise ex
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/server/superlink/fleet/vce/backend/raybackend.py", line 175, in process_message
+    ) = self.pool.fetch_result_and_return_actor_to_pool(future)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 478, in fetch_result_and_return_actor_to_pool
+    _, out_mssg, updated_context = ray.get(future)
+                                   ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/ray/_private/worker.py", line 864, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 58, in run
+    out_message = app(message=message, context=context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/client_app.py", line 126, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 96, in handle_legacy_message_from_msgtype
+    client = client_fn(context)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/client_utils.py", line 201, in client_fn
+    trainloader, valloader, _= load_datasets(cfg, partition_id)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/Diplomatic_incident/Differential_Privacy/Mnist_2/opacus_fl/data_utils.py", line 27, in load_datasets
+    partition = fds.load_partition(partition_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 177, in load_partition
+    self._prepare_dataset()
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr_datasets/federated_dataset.py", line 314, in _prepare_dataset
+    self._dataset = datasets.load_dataset(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 2132, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/load.py", line 1890, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 342, in __init__
+    self.config, self.config_id = self._create_builder_config(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 597, in _create_builder_config
+    builder_config._resolve_data_files(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/builder.py", line 206, in _resolve_data_files
+    self.data_files = self.data_files.resolve(base_path, download_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 818, in resolve
+    out[key] = data_files_patterns_list.resolve(base_path, download_config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 771, in resolve
+    resolve_pattern(
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/datasets/data_files.py", line 388, in resolve_pattern
+    for filepath, info in fs.glob(pattern, detail=True, **glob_kwargs).items()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 521, in glob
+    return super().glob(path, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 611, in glob
+    allpaths = self.find(root, maxdepth=depth, withdirs=True, detail=True, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 556, in find
+    return super().find(
+           ^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/fsspec/spec.py", line 502, in find
+    out[path] = self.info(path)
+                ^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_file_system.py", line 719, in info
+    paths_info = self._api.get_paths_info(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/hf_api.py", line 3303, in get_paths_info
+    hf_raise_for_status(response)
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 477, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=31488, ip=172.27.85.201, actor_id=cdee2d03f9ef3337b3ef144901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f21a06432d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/theo_ubuntu/miniconda3/envs/flwr_25_DP/lib/python3.11/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: 504 Server Error: Gateway Time-out for url: https://huggingface.co/api/datasets/ylecun/mnist/paths-info/77f3279092a1c1579b2250db8eafed0ad422088c
+
+[2025-02-17 19:21:28,380][flwr][INFO] - aggregate_fit: received 8 results and 2 failures
+[2025-02-17 19:21:33,128][flwr][INFO] - fit progress: (17, 21.544214819335938, {'accuracy': 0.3116}, 357.0318675210001)
+[2025-02-17 19:21:33,128][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:21:37,337][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:21:37,337][flwr][INFO] - 
+[2025-02-17 19:21:37,337][flwr][INFO] - [ROUND 18]
+[2025-02-17 19:21:37,337][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:21:42,549][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:21:46,666][flwr][INFO] - fit progress: (18, 28.388291064453124, {'accuracy': 0.3133}, 370.570526711992)
+[2025-02-17 19:21:46,666][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:21:50,674][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:21:50,675][flwr][INFO] - 
+[2025-02-17 19:21:50,675][flwr][INFO] - [ROUND 19]
+[2025-02-17 19:21:50,675][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:21:55,885][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:22:00,143][flwr][INFO] - fit progress: (19, 36.78318840942383, {'accuracy': 0.3147}, 384.0468595229904)
+[2025-02-17 19:22:00,143][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:22:04,151][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:22:04,151][flwr][INFO] - 
+[2025-02-17 19:22:04,151][flwr][INFO] - [ROUND 20]
+[2025-02-17 19:22:04,151][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:22:10,764][flwr][INFO] - aggregate_fit: received 10 results and 0 failures
+[2025-02-17 19:22:16,371][flwr][INFO] - fit progress: (20, 47.079068798828125, {'accuracy': 0.3139}, 400.2748535060091)
+[2025-02-17 19:22:16,371][flwr][INFO] - configure_evaluate: strategy sampled 10 clients (out of 10)
+[2025-02-17 19:22:20,580][flwr][INFO] - aggregate_evaluate: received 10 results and 0 failures
+[2025-02-17 19:22:20,581][flwr][INFO] - 
+[2025-02-17 19:22:20,581][flwr][INFO] - [SUMMARY]
+[2025-02-17 19:22:20,581][flwr][INFO] - Run finished 20 round(s) in 404.48s
+[2025-02-17 19:22:20,582][flwr][INFO] - 	History (loss, distributed):
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 1: 0.07612754722436268
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 2: 0.07459594229857126
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 3: 0.07010820209980011
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 4: 0.07186425844828288
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 5: 0.11055735150973003
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 6: 0.2010777817169825
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 7: 0.3789653333028158
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 8: 0.6864504432678223
+[2025-02-17 19:22:20,582][flwr][INFO] - 		round 9: 1.1759942007064819
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 10: 1.915037094751994
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 11: 2.988875691095988
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 12: 4.5016736094156915
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 13: 6.568091723124186
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 14: 9.33775452931722
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 15: 12.961647364298504
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 16: 17.62331398010254
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 17: 23.396315561930344
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 18: 30.841928151448563
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 19: 39.95630071004232
+[2025-02-17 19:22:20,583][flwr][INFO] - 		round 20: 51.146270802815756
+[2025-02-17 19:22:20,584][flwr][INFO] - 	History (loss, centralized):
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 0: 0.07207710530757903
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 1: 0.07152409455776215
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 2: 0.07015293431282044
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 3: 0.06574790472984314
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 4: 0.06694270030260085
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 5: 0.10330783770084381
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 6: 0.18978219552040101
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 7: 0.3553947733879089
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 8: 0.6405046975135803
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 9: 1.089525506210327
+[2025-02-17 19:22:20,584][flwr][INFO] - 		round 10: 1.7694442312240601
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 11: 2.7552894790649414
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 12: 4.14372657623291
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 13: 6.043834706115723
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 14: 8.59021713104248
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 15: 11.921370974731445
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 16: 16.21119306945801
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 17: 21.544214819335938
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 18: 28.388291064453124
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 19: 36.78318840942383
+[2025-02-17 19:22:20,585][flwr][INFO] - 		round 20: 47.079068798828125
+[2025-02-17 19:22:20,585][flwr][INFO] - 	History (metrics, distributed, fit):
+[2025-02-17 19:22:20,585][flwr][INFO] - 	{'clients_epsilons': [(1, 0.5),
+[2025-02-17 19:22:20,585][flwr][INFO] - 	                      (2, 0.5),
+[2025-02-17 19:22:20,585][flwr][INFO] - 	                      (3, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (4, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (5, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (6, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (7, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (8, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (9, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (10, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (11, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (12, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (13, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (14, 0.5),
+[2025-02-17 19:22:20,586][flwr][INFO] - 	                      (15, 0.5),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                      (16, 0.5),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                      (17, 0.5),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                      (18, 0.5),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                      (19, 0.5),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                      (20, 0.5)],
+[2025-02-17 19:22:20,587][flwr][INFO] - 	 'clients_losses': [(1, 2.2945848925908408),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (2, 2.266460002263387),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (3, 2.1939955806732176),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (4, 2.0762987184524535),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (5, 2.523120444615682),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (6, 4.280095642407735),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (7, 7.947978111902873),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (8, 14.587676394780477),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (9, 25.574287338256838),
+[2025-02-17 19:22:20,587][flwr][INFO] - 	                    (10, 42.43668849945068),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (11, 67.5669711558024),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (12, 103.61648361206055),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (13, 153.50909556070962),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (14, 221.22259557088216),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (15, 310.9561173502604),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (16, 427.3793559773763),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (17, 580.4005366007488),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (18, 761.5298189290364),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (19, 995.8132800292968),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                    (20, 1282.5499755859375)]}
+[2025-02-17 19:22:20,588][flwr][INFO] - 	History (metrics, distributed, evaluate):
+[2025-02-17 19:22:20,588][flwr][INFO] - 	{'clients_accuracies': [(1, 0.11333333333333333),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                        (2, 0.20833333333333334),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                        (3, 0.2633333333333333),
+[2025-02-17 19:22:20,588][flwr][INFO] - 	                        (4, 0.3075),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (5, 0.33999999999999997),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (6, 0.355),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (7, 0.3458333333333333),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (8, 0.3383333333333334),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (9, 0.32999999999999996),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (10, 0.3241666666666666),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (11, 0.31416666666666665),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (12, 0.30916666666666665),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (13, 0.3058333333333333),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (14, 0.3058333333333333),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (15, 0.30166666666666675),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (16, 0.2975),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (17, 0.2908333333333334),
+[2025-02-17 19:22:20,589][flwr][INFO] - 	                        (18, 0.2916666666666667),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                        (19, 0.29416666666666663),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                        (20, 0.29333333333333333)],
+[2025-02-17 19:22:20,590][flwr][INFO] - 	 'clients_losses': [(1, 0.07612754722436268),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                    (2, 0.07459594229857126),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                    (3, 0.07010820209980011),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                    (4, 0.07186425844828288),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                    (5, 0.11055735150973003),
+[2025-02-17 19:22:20,590][flwr][INFO] - 	                    (6, 0.2010777817169825),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (7, 0.3789653333028158),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (8, 0.6864504432678223),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (9, 1.1759942007064819),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (10, 1.915037094751994),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (11, 2.988875691095988),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (12, 4.5016736094156915),
+[2025-02-17 19:22:20,591][flwr][INFO] - 	                    (13, 6.568091723124186),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (14, 9.33775452931722),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (15, 12.961647364298504),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (16, 17.62331398010254),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (17, 23.396315561930344),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (18, 30.841928151448563),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (19, 39.95630071004232),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	                    (20, 51.146270802815756)]}
+[2025-02-17 19:22:20,592][flwr][INFO] - 	History (metrics, centralized):
+[2025-02-17 19:22:20,592][flwr][INFO] - 	{'accuracy': [(0, 0.1028),
+[2025-02-17 19:22:20,592][flwr][INFO] - 	              (1, 0.1041),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (2, 0.1933),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (3, 0.2612),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (4, 0.312),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (5, 0.3397),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (6, 0.3545),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (7, 0.3556),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (8, 0.3462),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (9, 0.3382),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (10, 0.3329),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (11, 0.3277),
+[2025-02-17 19:22:20,593][flwr][INFO] - 	              (12, 0.3255),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (13, 0.3202),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (14, 0.3181),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (15, 0.317),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (16, 0.3151),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (17, 0.3116),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (18, 0.3133),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (19, 0.3147),
+[2025-02-17 19:22:20,594][flwr][INFO] - 	              (20, 0.3139)]}
+[2025-02-17 19:22:20,594][flwr][INFO] - 

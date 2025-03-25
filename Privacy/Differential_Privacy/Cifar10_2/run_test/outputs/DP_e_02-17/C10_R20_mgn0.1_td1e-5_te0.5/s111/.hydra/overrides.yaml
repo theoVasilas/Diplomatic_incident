@@ -1,0 +1,9 @@
+- SEED=111
+- num_clients=10
+- ROUNDS=20
+- Dp_enabel=True
+- target_delta=1e-5
+- Dp_e_enabel=True
+- learning_rate=0.01
+- target_epsilon=0.5
+- folder_name=DP_e_02-17/C10_R20_mgn0.1_td1e-5_te0.5/s111

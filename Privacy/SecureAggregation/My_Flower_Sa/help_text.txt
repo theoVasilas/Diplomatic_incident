@@ -1,0 +1,5 @@
+#===========================================
+cd ~/Diplomatic_incident/SecureAggregation/My_Flowe_Sa/Mnist_SA
+conda deactivate
+conda activate flower_25
+clear; flwr run . 
